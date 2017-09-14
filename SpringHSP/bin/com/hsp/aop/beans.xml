@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 配置被代理的对象 -->
+<bean id="test1Service" class="com.hsp.aop.Test1Service">
+	<property name="name" value="小明"/>
+</bean>
+
+<!-- 配置前置通知 -->
+<bean id="MyMethodBeforeAdvice" class="com.hsp.aop.MyMethodBeforeAdvice"/>
+
+<!-- 配置后置通知 -->
+<bean id="myAfterReturningAdvice" class="com.hsp.aop.MyAfterReturningAdvice"/>
+
+<!-- 配置环绕通知 -->
+<bean id="myMethodInterceptor" class="com.hsp.aop.MyMethodInterceptor"/>
+
+<!-- 配置异常通知 -->
+<bean id="myThrowsAdvice" class="com.hsp.aop.MyThrowsAdvice"/>
+
+<!-- 配置代理对象 -->
+<bean id="proxyFactoryBean" class="org.springframework.aop.framework.ProxyFactoryBean">
+	<!-- 代理接口集 -->
+	<property name="proxyInterfaces">
+		<list>
+			<value>com.hsp.aop.TestServiceInter</value>
+			<value>com.hsp.aop.TestServiceInter2</value>
+		</list>
+	</property>
+	<!-- 把通知织入到代理对象 -->
+	<property name="interceptorNames">
+			<!-- 相当于把MyMethodBeforeAdvice前置通知和代理对象关联 ,我们也可以把通知看成拦截器-->
+		<list>
+			<value>MyMethodBeforeAdvice</value>
+			<!-- 相当于织入后置通知 -->
+			<value>myAfterReturningAdvice</value>
+			<!-- 织入环绕通知 -->
+			<value>myMethodInterceptor</value>
+			<!-- 织入异常通知 -->
+			<value>myThrowsAdvice</value>
+		</list>	
+	</property>
+	<!-- 配置被代理对象,可以指定 -->
+	<property name="target" ref="test1Service"/>
+</bean>
+</beans>

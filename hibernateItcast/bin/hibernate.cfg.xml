@@ -1,0 +1,31 @@
+<!--
+  ~ Hibernate, Relational Persistence for Idiomatic Java
+  ~
+  ~ License: GNU Lesser General Public License (LGPL), version 2.1 or later.
+  ~ See the lgpl.txt file in the root directory or <http://www.gnu.org/licenses/lgpl-2.1.html>.
+  -->
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory name="foo">
+		<!-- hibernate 是否显示生成是sql -->
+		<property name="show_sql">true</property>
+		<!-- 告诉 hibernate使用什么数据库方言 -->
+		<property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+		<!-- 告诉 hibernate 使用什么数据库驱动 -->
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 告诉hibernate 使用哪个数据库 -->
+		<property name="connection.url">jdbc:mysql:///hibernate</property>
+		<!-- 告诉hibernate 数据库用户名 -->
+		<property name="connection.username">root</property>
+		<!-- 告诉hibernate 数据库密码 -->
+		<property name="connection.password">123456</property>
+		
+		<property name="hbm2ddl.auto">create</property>
+		<!-- 告诉hibernate 需要管理的业务对象 -->
+		<!-- <mapping resource="cc/wei/hibernate/day1/domain/User.hbm.xml"/> -->
+		<mapping resource="cc/wei/hibernate/day2/domain/PropertyDomain.hbm.xml"/>
+	</session-factory>
+</hibernate-configuration>

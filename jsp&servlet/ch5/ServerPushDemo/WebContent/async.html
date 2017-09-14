@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>实时资料</title>
+<script>
+	function asyncUpdate(){
+		var xhr;
+		if(window.XMLHttpRequest){
+			xhr = new XMLHttpRequest;
+		}else if(window.ActiveXObject){
+			xhr = new ActiveXObject('Microsoft.XMLHTTP');
+		}
+		xhr.onreadystatechange = function(){
+			if(xhr.readyState ===4){
+				if(xhr.status === 200){
+					document.getElementById('data').innerHTML = xhr.responseText;
+					asyncUpdate();
+				}
+			}
+		};
+		xhr.open('GET','asyncNum.do?timestamp=' + new Date().getTime());
+		xhr.send(null);
+	}
+	window.onload = asyncUpdate;
+	
+</script>
+</head>
+<body>
+	实时资料：<span id='data'>0</span>
+</body>
+</html>

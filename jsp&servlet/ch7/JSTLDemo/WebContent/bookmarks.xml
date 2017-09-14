@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="bookmarks.xsl"?>
+<bookmarks>
+    <bookmark id="1">
+        <title encoding="Big5">良葛格网站</title>
+        <url>http://openhome.cc</url>
+        <category>程序设计</category>
+    </bookmark>
+    <bookmark id="2">
+        <title encoding="UTF8">JWorld@TW</title>
+        <url>http://www.javaworld.com.tw</url>
+        <category>技术论坛</category>
+    </bookmark>            
+</bookmarks>

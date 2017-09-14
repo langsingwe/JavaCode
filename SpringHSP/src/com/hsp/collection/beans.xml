@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="department" class="com.hsp.collection.Department">
+	<property name="name" value="财务部"/>
+	<!-- 给数组注值 -->
+	<property name="empName">
+		<list>
+			<value>小明</value>
+			<value>小小明</value>
+			<value>大明</value>
+		</list>
+	</property>
+	<!-- 给List注入值 ,list可以有相同对象-->
+	<property name="empList">
+		<list>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+		</list>
+	</property>
+	<!-- 给set注入值 ，set不能有相同对象-->
+	<property name="empSets">
+		<set>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+			<ref bean="emp1"/>
+			<ref bean="emp2"/>
+		</set>
+	</property>
+	<!-- 给Map注入值,只要key不一样，就可以装配value -->
+	<property name="empMaps">
+		<map>
+			<entry key="1" value-ref="emp1"/>
+			<entry key="2" value-ref="emp2"/>
+		</map>
+	</property>
+</bean>
+
+<bean id="emp1" class="com.hsp.collection.Employee">
+	<property name="name" value="北京"/>
+	<property name="id" value="1"/>
+</bean>
+<bean id="emp2" class="com.hsp.collection.Employee">
+	<property name="name" value="天津"/>
+	<property name="id" value="2"/>
+</bean>
+</beans>

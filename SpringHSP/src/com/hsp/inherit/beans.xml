@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!-- 配置一个学生对象 -->
+<bean id="student" class="com.hsp.inherit.Student">
+	<property name="name" value="小明"/>
+	<property name="age" value="20"/>
+</bean>
+<!-- 配置Graduate对象 --> 
+<bean id="graduate" parent="student" class="com.hsp.inherit.Graduate">
+	<!-- 如果自己配置属性name,age,则会替换从父对象继承的数据 -->
+	<property name="name" value="大明"/>
+	<property name="degree" value="学士"/>
+</bean>
+</beans>

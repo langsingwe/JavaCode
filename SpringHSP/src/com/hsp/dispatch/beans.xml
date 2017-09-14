@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
+			
+	<!-- 引入我们的db.properties文件 -->			
+	<context:property-placeholder location="classpath:com/hsp/dispatch/db.properties,classpath:com/hsp/dispatch/db2.properties"/>
+	<!-- 配置-DBUtil对象 -->
+	<bean id="dbutil1" class="com.hsp.dispatch.DBUtil">
+		<property name="name" value="${name}" />
+		<property name="driver" value="${driver}" />
+		<property name="url" value="${url}" />
+		<property name="pwd" value="${pwd}" />
+	</bean>
+	<!-- 配置-DBUtil对象 -->
+	<bean id="dbutil2" class="com.hsp.dispatch.DBUtil">
+		<property name="name" value="${db2.name}" />
+		<property name="driver" value="${db2.driver}" />
+		<property name="url" value="${db2.url}" />
+		<property name="pwd" value="${db2.pwd}" />
+	</bean>
+</beans>
