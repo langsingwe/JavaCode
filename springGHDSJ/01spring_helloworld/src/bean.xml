@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 在配置文件中，一个bean表示一个对象，容器会根据bean配置信息生成对应的对象
+		 id表示bean的标识符，根据标识符可以从容器中获取对象,id不能重复。如果没有配置标识符，可以根据对象
+		 类型来获取该对象，如果没有配置标识符，那么该类型的对象在容器中只能有一个。name指定对象的别名
+		 如果没有id,那么name作为标识符。可以指定多个别名。多个别名之间可以使用空格，分号，逗号来分隔。
+		 class指定bean的完全限定名 
+	 -->
+	<bean id="user" class="cc.wei.vo.User">
+		<!-- property表示bean对象的属性
+			 name表示bean对象中属性所对应的set方法
+			 value表示属性值 只能是基本数据类型和字符串
+			 如果是对象，使用ref来设置
+		 -->
+		<property name="name" value="张三"/>
+		<property name="age" value="20"/>
+		<property name="role" ref="role"></property>
+	</bean>
+	<bean id="role" class="cc.wei.vo.Role">
+		<property name="name" value="admin"/>
+	</bean>
+	<!-- 设置别名,一次只能指定一个别名 -->
+	<alias name="user" alias="u5"/>
+	<!-- 用于团队开发，引入别的配置文件 -->
+	<!-- <import resource=""/> -->
+</beans>

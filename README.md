@@ -10,6 +10,10 @@
 ### jsp&servlet
 这是台湾林信良先生在《jsp&servlet学习笔记》中的一些经典案例，也是我学习jsp&servlet的第一本书籍教材。比较适合学习javaWeb开发的初学者和巩固者。学习jsp，建议首先学习servlet，如果能把servlet弄明白，学习jsp也是轻而易举。<br>[点我进入该目录](https://github.com/weiliangchun/JavaCode/tree/master/jsp%26servlet)
 
+### springGHDSJ
+光环大数据的spring视频教程笔记代码，资源地址：https://ke.qq.com/course/205266<br>
+[点我进入该目录](https://github.com/weiliangchun/JavaCode/tree/master/springGHDSJ)
+
 ### SpringHSP
 这是学习韩顺平spring教程的实例代码和学习笔记，主要解释了IOC/DI和AOP，非常通俗易懂，入门必选。资源地址https://pan.baidu.com/s/1bpGVxgz, 提取密码**m5fn**<br>
 [点我进入该目录](https://github.com/weiliangchun/JavaCode/tree/master/SpringHSP)
