@@ -17,3 +17,7 @@
 ### SpringHSP
 这是学习韩顺平spring教程的实例代码和学习笔记，主要解释了IOC/DI和AOP，非常通俗易懂，入门必选。资源地址https://pan.baidu.com/s/1bpGVxgz, 提取密码**m5fn**<br>
 [点我进入该目录](https://github.com/weiliangchun/JavaCode/tree/master/SpringHSP)
+
+### springMVC
+光环大数据的springMVC入门教程，2017年4月左右的培训视频，是目前本人看到的最新教程，基本上spring版本都是接近最新的，不会出现语法过时报错这些现象，很简单，非常适合新手入门。视频地址：https://ke.qq.com/course/204686 
+[点我进入该目录](https://github.com/weiliangchun/JavaCode/tree/master/springMVC)

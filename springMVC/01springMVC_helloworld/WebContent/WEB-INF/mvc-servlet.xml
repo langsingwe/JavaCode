@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- 配置处理器映射器 -->
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+	<!-- name为请求的url class为请求处理器 -->
+	<bean name="/hello.do" class="cc.wei.controller.HelloController"/>	
+	<!-- 配置适配器 -->
+	<bean class="org.springframework.web.servlet.mvc.SimpleControllerHandlerAdapter"/>
+	<!-- 配置视图解析器 -->
+	<bean id="viewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
+	    <!-- 视图解析器的前缀 讲返回的ModelAndView的名前加上前缀 -->
+	    <property name="prefix" value="/WEB-INF/jsp/"/>
+	    <!-- 视图解析器的后缀 如果返回的视图名为hello 那么最终视图为 /WEB-INF/jsp/hello.jsp -->
+	    <property name="suffix" value=".jsp"/>
+	</bean>
+</beans>
