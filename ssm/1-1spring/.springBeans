@@ -16,6 +16,7 @@
 		<config>src/main/resources/spring-resource.xml</config>
 		<config>src/main/resources/spring-beanannotation.xml</config>
 		<config>src/main/resources/spring-aop-schema-advice.xml</config>
+		<config>src/main/resources/spring-aop-aspectj.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

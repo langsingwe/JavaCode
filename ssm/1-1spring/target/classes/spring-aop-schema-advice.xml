@@ -13,7 +13,16 @@
 
 	<aop:config>
 		<aop:aspect id="myAspectAOP" ref="myAspect">
+			<aop:pointcut expression="execution(* com.spring.aop.schema.advice.biz.AspectBiz.*(..))" id="myPointCut"/>
+			<aop:before method="before" pointcut-ref="myPointCut"/>
+			<aop:after-returning method="afterReturning" pointcut-ref="myPointCut"/>
+			<aop:after-throwing method="afterThrowing" pointcut-ref="myPointCut"/>
+			<aop:after method="after" pointcut-ref="myPointCut" />
+			<aop:around method="around" pointcut-ref="myPointCut"/>
 			
+			<aop:around method="aroundInit" pointcut="execution(* com.spring.aop.schema.advice.biz.AspectBiz.init(String,int)) and args(bizName,times)"/>
+		
+			<aop:declare-parents types-matching="com.spring.aop.schema.advice.biz.*(+)" implement-interface="com.spring.aop.schema.advice.Fit" default-impl="com.spring.aop.schema.advice.FitImpl"/>
 		</aop:aspect>
 	</aop:config>
 </beans>
