@@ -24,8 +24,11 @@
 
 ### ssm
 ssm(springmvc+spring+mybatis)学习课程代码  
-学习路径：
-1. 《Spring入门篇》《Spring事务管理》
-2. 《Spring MVC起步》《Spring MVC拦截器》
-3. 《Mybatis基础篇-加强篇》
-4. 《ssm整合案例-java高并发秒杀系统》
+
+SSM学习路径分为4个阶段 
+
+* 战斗伊始——Spring 《Spring入门篇》、《Spring事务管理》
+* 转战阵地——SpringMVC 《Spring MVC起步》、《Spring MVC拦截器》
+* 再下一城——MyBatis 《通过自动回复机器人学mybatis--基础版》、《通过自动回复机器人学mybatis--加强版》
+* 终极目标——整合案例 《java高并发秒杀系统之业务分析与DAO层》、《java高并发秒杀系统之Service层》、《java高并发秒杀系统之Web层》、《java高并发秒杀系统之并发优化》  
+相关视频教程链接：http://www.imooc.com/course/programdetail/pid/59
