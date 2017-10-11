@@ -1,8 +1,10 @@
 这里是学习java的过程中，视频或者书籍中的一些案例代码
 [TOC]
+### hibernateImooc
+慕课网学习Hibernate的笔记和源码。总共分为三个阶段，基础，进阶，实战。视频源地址：http://www.imooc.com/course/programdetail/pid/48
+
 ### hibernateItcast
 学习hibernate的入门级教程，视频源地址http://study.163.com/course/courseMain.htm?courseId=500005。
-
 
 ### javaSEbixiangdong
 这是毕向东javaSE视频的一些案例代码，这视频我之前已经看过一遍，也是我学习java的入门视频。毕老师讲课风格很有趣，说的知识点也很全面，经常会提一些注意和面试题，发现在工作中的确能遇到。强烈推荐。附上毕老师java25天的视频资源地址：https://pan.baidu.com/s/1qYqM3hE。提取码 **8nmj**
