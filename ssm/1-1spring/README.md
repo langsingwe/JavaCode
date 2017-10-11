@@ -1,13 +1,5 @@
 [TOC]
 
-SSM学习路径分为4个阶段
-* 战斗伊始——Spring
-* 转战阵地——SpringMVC
-* 再下一城——MyBatis
-* 终极目标——整合案例
-
-<font size=6><center>**战斗伊始——Spring**</center></font>
-
 # 1-1 Spring入门篇
 
 ## 专题一、IOC
