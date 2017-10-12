@@ -1,4 +1,4 @@
-<center><font size=6>目录</font></center>
+<center>目录</center>
 
 ###### 这里是java学习过程中的code以及笔记，笔记都放在README.md中方便阅读。
 
