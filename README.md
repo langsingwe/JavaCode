@@ -1,6 +1,6 @@
-<center>目录</center>
+# 目录
 
-###### 这里是java学习过程中的code以及笔记，笔记都放在README.md中方便阅读。
+#### 这里是java学习过程中的code以及笔记，笔记都放在README.md中方便阅读。
 
 [TOC]
 ### hibernateImooc
