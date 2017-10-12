@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2017-10-12 10:49:12 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="cc.wlc.entity.Grade" table="grade">
+        <id name="gid" type="int">
+            <column name="gid" />
+            <generator class="increment" />
+        </id>
+        <property name="gname" type="java.lang.String">
+            <column name="gname" length="20" not-null="true"/>
+        </property>
+        <property name="gdesc" type="java.lang.String">
+            <column name="gdesc" />
+        </property>
+        <!-- 配置一对多关联关系 ,设置inverse属性为true，由多方进行关联关系的维护-->
+        <set name="students" table="student" inverse="true" lazy="true" cascade="save-update">
+            <key>
+                <column name="gid" />
+            </key>
+            <one-to-many class="cc.wlc.entity.Student" />
+        </set>
+    </class>
+</hibernate-mapping>
