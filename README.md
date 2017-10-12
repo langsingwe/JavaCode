@@ -1,4 +1,7 @@
-这里是学习java的过程中，视频或者书籍中的一些案例代码
+<center><font size=6>目录</font></center>
+
+###### 这里是java学习过程中的code以及笔记，笔记都放在README.md中方便阅读。
+
 [TOC]
 ### hibernateImooc
 慕课网学习Hibernate的笔记和源码。总共分为三个阶段，基础，进阶，实战。视频源地址：http://www.imooc.com/course/programdetail/pid/48
