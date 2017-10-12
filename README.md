@@ -16,7 +16,7 @@
 光环大数据的spring视频教程笔记代码，资源地址：https://ke.qq.com/course/205266
 
 
-### SpringHSP
+### springHSP
 这是学习韩顺平spring教程的实例代码和学习笔记，主要解释了IOC/DI和AOP，非常通俗易懂，入门必选。资源地址https://pan.baidu.com/s/1bpGVxgz, 提取密码**m5fn**
 
 
