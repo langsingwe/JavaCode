@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2017-10-13 9:55:58 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="cc.wlc.model.Seller" table="SELLER">
+    <class name="cc.wlc.model.Customer" table="CUSTOMER">
         <id name="id" type="java.lang.Long">
             <column name="ID" />
             <generator class="increment" />
@@ -17,14 +17,20 @@
         <property name="address" type="java.lang.String">
             <column name="ADDRESS" />
         </property>
-        <property name="website" type="java.lang.String">
-            <column name="WEBSITE" />
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
         </property>
-        <property name="star" type="java.lang.Integer">
-            <column name="STAR" />
+        <property name="sex" type="java.lang.String">
+            <column name="SEX" />
         </property>
-        <property name="business" type="java.lang.String">
-            <column name="BUSINESS" />
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
+        </property>
+        <property name="age" type="java.lang.Integer">
+            <column name="AGE" />
+        </property>
+        <property name="birthday" type="java.util.Date">
+            <column name="BIRTHDAY" />
         </property>
     </class>
 </hibernate-mapping>

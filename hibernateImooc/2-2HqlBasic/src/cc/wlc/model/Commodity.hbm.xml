@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2017-10-13 9:55:58 by Hibernate Tools 3.5.0.Final -->
 <hibernate-mapping>
-    <class name="cc.wlc.model.Seller" table="SELLER">
+    <class name="cc.wlc.model.Commodity" table="COMMODITY">
         <id name="id" type="java.lang.Long">
             <column name="ID" />
             <generator class="increment" />
@@ -11,20 +11,20 @@
         <property name="name" type="java.lang.String">
             <column name="NAME" />
         </property>
-        <property name="tel" type="java.lang.String">
-            <column name="TEL" />
+        <property name="price" type="java.lang.Double">
+            <column name="PRICE" />
         </property>
-        <property name="address" type="java.lang.String">
-            <column name="ADDRESS" />
+        <property name="unit" type="java.lang.String">
+            <column name="UNIT" />
         </property>
-        <property name="website" type="java.lang.String">
-            <column name="WEBSITE" />
+        <property name="category" type="java.lang.String">
+            <column name="CATEGORY" />
         </property>
-        <property name="star" type="java.lang.Integer">
-            <column name="STAR" />
+        <property name="description" type="java.lang.String">
+            <column name="DESCRIPTION" />
         </property>
-        <property name="business" type="java.lang.String">
-            <column name="BUSINESS" />
-        </property>
+        <many-to-one name="seller" class="cc.wlc.model.Seller" fetch="join">
+            <column name="SELLER" />
+        </many-to-one>
     </class>
 </hibernate-mapping>

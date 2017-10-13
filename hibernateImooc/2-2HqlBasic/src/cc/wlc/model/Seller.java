@@ -15,6 +15,13 @@ public class Seller implements Serializable {
 	private Integer star;// 星级
 	private String business;// 经营范围
 
+	public Seller(String name, String tel, String address) {
+//		super();
+		this.name = name;
+		this.tel = tel;
+		this.address = address;
+	}
+
 	public Long getId() {
 		return id;
 	}
