@@ -3,8 +3,8 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/junit4"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/mysql-jdbc"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/hibernate5-core"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
