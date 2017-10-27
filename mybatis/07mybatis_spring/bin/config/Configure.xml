@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="User" type="com.mybatis.pojo.User" />
+		<typeAlias alias="Order" type="com.mybatis.pojo.Order" />
+	</typeAliases>
+	
+
+	<mappers>
+	     <!-- // power by http://www.yiibai.com  -->
+	     <mapper resource="com/mybatis/mapper/UserMapper.xml" />
+	</mappers>
+</configuration>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mybatis.mapper.UserMapper">
+	
+		<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="User" id="resultUser">
+        <id column="id" property="id" />
+        <result column="username" property="username" />
+        <result column="mobile" property="mobile" />
+    </resultMap>
+    
+	<!-- User 联合 Order 查询 方法的配置 (多对一的方式)  -->	
+	<resultMap id="resultUserOrders" type="Order">
+	    <id property="orderId" column="order_id" />
+	    <result property="orderNo" column="order_no" />
+	    <result property="money" column="money" />
+	    <result property="userId" column="user_id" />
+	    
+	    <association property="user" javaType="User">
+	        <id property="id" column="id" />
+	        <result property="username" column="username" />
+	        <result property="mobile" column="mobile" />	        
+	    </association>	    
+	</resultMap> 
+	
+	<select id="getUserOrders" parameterType="int" resultMap="resultUserOrders">
+	   SELECT u.*,o.* FROM `user` u, `order` o 
+	          WHERE u.id=o.user_id AND u.id=#{id}
+	</select>
+	
+	<select id="getUserById" resultMap="resultUser" parameterType="int">
+		SELECT *
+		FROM user
+		WHERE id=#{id}
+	</select>    
+</mapper>

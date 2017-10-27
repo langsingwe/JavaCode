@@ -15,6 +15,10 @@
 ### [jsp&servlet](https://github.com/weiliangchun/JavaCode/tree/master/jsp&servlet)
 这是台湾林信良先生在《jsp&servlet学习笔记》中的一些经典案例，也是我学习jsp&servlet的第一本书籍教材。比较适合学习javaWeb开发的初学者和巩固者。学习jsp，建议首先学习servlet，如果能把servlet弄明白，学习jsp也是轻而易举。jsp%26servlet)
 
+### [mybatis](https://github.com/weiliangchun/JavaCode/tree/master/mybatis)
+易百教程的myabtis教程，简单入门，但不是很推荐，教程存在很多错误。原地址：http://www.yiibai.com/mybatis/
+
+
 ### [springGHDSJ](https://github.com/weiliangchun/JavaCode/tree/master/springGHDSJ)
 光环大数据的spring视频教程笔记代码，资源地址：https://ke.qq.com/course/205266
 
